@@ -1,0 +1,10 @@
+{
+    "fecha_cierre_t1": "2026-10-06",
+    "ultimo_spot_usdclp": 973.95,
+    "probabilidad_estimada": 0.5032,
+    "probabilidad_efectiva_carry": 0.5029,
+    "carry_diario_bps": 0.17,
+    "posicion_sugerida": 0,
+    "direccion_esperada": "ABSTENCIÓN (En Pesos Chilenos ganando tasa r_CLP)",
+    "status": "SUCCESS"
+}
