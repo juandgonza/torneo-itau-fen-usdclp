@@ -46,7 +46,7 @@ El pipeline opera sin librerías externas de caja negra, implementado directamen
 * **Ponderación por Retorno Absoluto (*Sample Weighting*, López de Prado, 2018):** Cada observación histórica se pondera proporcionalmente a $|{r}_{i}|+\epsilon$, priorizando eventos de alta volatilidad y desbalance de liquidez sobre días laterales.  
 * **Balanceo de Clases 50/50:** Normalización exacta para garantizar que el intercepto $b\approx 0$, evitando sesgos estructurales de predicción.  
 * **Ensamble Dual de Horizontes:** Combinación lineal convexa: $$\hat{p}_t = 0.55 \cdot \hat{p}_t^{\text{Estructural (10 años)}} + 0.45 \cdot \hat{p}_t^{\text{Adaptativo (2 años)}}$$
-* **Ajuste de Carry Diario:** $$p_{\text{eff}, t} = \hat{p}_t - \text{clip}\left(0.15 \cdot \frac{r_{\text{CLP}} - r_{\text{USD}}}{\sigma_{20d}}, -0.012, +0.012\right)$$  
+* **Ajuste de Carry Diario:** $p_{\text{eff}, t} = \hat{p}_t - \text{clip}\left(0.15 \cdot \frac{r_{\text{CLP}} - r_{\text{USD}}}{\sigma_{20d}}, -0.012, +0.012\right)$
 * **Filtro de Tendencia SMA50:** Bloquea ventas cortas agresivas ($-3x$) si el tipo de cambio cotiza sobre su media móvil de 50 días, e inhibe compras si el mercado está en caída estructural.  
 * **Histéresis de Rotación:** Banda de amortiguación de $1.5\%$ para impedir giros erráticos entre días consecutivos.
 
